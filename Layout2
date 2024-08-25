@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px auto;
+            text-align: center;
+        }
+       .Wrapper {
+        height: 600px;
+        width: 900px;
+        background-color: rgb(53, 173, 147);
+        box-sizing: border-box;
+       }
+       header{
+        height: 150px;
+        width: 900px;
+        background-color: rgb(152, 160, 48);
+       }
+       nav{
+        height: 50px;
+        width: 900px;
+        background-color: rgb(19, 126, 214);
+       }
+       #content {
+        height: 300px;
+        width: 900px;
+        background-color: rgb(228, 42, 42);
+       }
+       footer{
+        height: 100px;
+        width: 900px;
+        background-color: rgb(108, 24, 218);
+       }
+       #ct1{
+        height: 150px;
+        width: 450px;
+        background-color: rgb(235, 113, 32);
+        float: left;
+       }
+       #ct2{
+        height: 100px;
+        width: 450px;
+        background-color: rgb(144, 16, 129);
+        float: left;
+       }
+       #ac1{
+        height: 150px;
+        width: 450px;
+        background-color: rgb(189, 169, 159);
+        float: left;
+       }
+       #ac2{
+        height: 150px;
+        width: 450px;
+        background-color: rgb(158, 77, 119);
+        float: left;
+       }
+       #se1{
+        height: 150px;
+        width: 450px;
+        background-color: rgb(73, 137, 211);
+        float: left;
+       }
+       #se2{
+        height: 150px;
+        width: 450px;
+        background-color: rgb(90, 78, 143);
+        float: left;
+       }
+    
+    </style>
+</head>
+<body>
+    <div class="Wrapper">
+        <header> header </header>
+        <nav> menu  </nav>
+        <div id="content">
+            <section id="ct1">
+                <article id="ac1"> article 1 </article>
+                <article id="ac2"> article 2 </article>
+            </section>
+            <aside id="ct2">
+                <section id="se1"> section 1 </section>
+                <section id="se2"> section 2 </section>
+            </aside>
+        </div>
+        <footer> footer </footer>
+    </div>
+</body>
+</html>
