@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autumn Travel Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        header {
+            background-color: #a5642c;
+            color: white;
+            text-align: left;
+            padding: 20px 0;
+            font-size: 20px;
+        }
+        
+        h1 {
+            color: #e7cfbb;
+            position: relative;
+            left: 20px;
+            filter: drop-shadow(0.20em 0.40em 0.4em);
+        }
+        
+        h2 p {
+            color: #a5642c;
+        }
+        
+        nav ul {
+            background-color: #a5642c;
+            padding: 10px;
+            list-style-type: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            top: 10px;
+            left: 20px;
+            text-align: left;
+        }
+        
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .signup-form {
+            width: 60%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .signup-form h2 {
+            color: #b5651d;
+        }
+        
+        .signup-form p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .signup-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .signup-form label {
+            margin-top: 10px;
+        }
+        
+        .signup-form input {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .signup-form button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #b5651d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .sidebar {
+            width: 35%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .sidebar h3 {
+            color: #b5651d;
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #b5651d;
+        }
+        
+        footer {
+            background-color: #a5642c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        
+        span {
+            color: black;
+            position: relative;
+            bottom: -10px;
+            right: -10px;
+        }
+        
+        .float-img {
+            float: left;
+        }
+        
+        .signup-form p {
+            color: #a5642c
+        }
+    </style>
+
+    <div class="container">
+        <header>
+            <h1>Autumn Travel Company</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">About</a></li>&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Products</a></li>&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Services</a></li>&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Order</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="/IMG/mua-thu-la-do-han-quoc-2.jpg" alt="Lá mùa thu" width="1095px" height="250px">
+        <div class="main-content">
+            <div class="signup-form">
+                <h2>Sign up for membership benefits</h2>
+                <p>Our philosophical values are transparency, respect, formality, and responsibility. Our stimulus is your enthusiasm. Our motto is your satisfaction.</p>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="retype-password">Retype password</label>
+                    <input type="password" id="retype-password" name="retype-password" required>
+
+                    <button type="submit">Sign Me Up</button>
+                </form>
+            </div>
+
+            <div class="sidebar" style="color:#a5642c">
+                <h3>Links</h3>
+                <ul>
+                    <li>&bull; <a href="#">Make your Own Tour</a></li>
+                    <li>&bull; <a href="#">Maldives Tours</a></li>
+                    <li>&bull; <a href="#">Nature & Adventure</a></li>
+                    <li>&bull; <a href="#">Readymade Tours</a></li>
+                    <li>&bull; <a href="#">Europe Tours</a></li>
+                    <li>&bull; <a href="#">Russia Tours</a></li>
+                </ul>
+
+                <h3>More info</h3>
+                <img src="/IMG/images.jpg" alt="Lá Khô" width="150px" height="100px" class="float-img">
+                <span> Our purpose is the client who gives us the opportunity to serve and to make known the reality around the world.</span>
+            </div>
+        </div>
+        <footer>
+            <p>© 2017 Software Engineering Department | Test Date: 16 Sept 2017</p>
+        </footer>
+    </div>
+</body>
+
+</html>
