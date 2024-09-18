@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        header {
+            background-color: #f7c1c1;
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #ae5a5a;
+            position: relative;
+        }
+        
+        nav {
+            background-color: #f7c1c1;
+            text-align: center;
+            padding: 10px 0;
+            margin: 0;
+        }
+        
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ae5a5a;
+            font-size: 18px;
+        }
+        
+        nav a:hover {
+            border-bottom: 2px solid #ae5a5a;
+        }
+        
+        .sidebar {
+            width: 200px;
+            background-color: #f7c1c1;
+            padding: 15px;
+            float: left;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #ea8c8c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .sidebar a:hover {
+            background-color: #c76464;
+        }
+        
+        .sidebar img {
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 100%;
+            box-shadow: 0 0 20px #ccc;
+        }
+        
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+            vertical-align: middle;
+        }
+        
+        .content h2 {
+            color: #ae5a5a;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+            text-transform: uppercase;
+            background-color: #f7c1c1;
+            display: inline-block;
+            padding: 5px 20px;
+        }
+        
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .content ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .content ul li a {
+            color: #ae5a5a;
+            text-decoration: none;
+        }
+        
+        .content ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .content img {
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ccc;
+        }
+        
+        h2 {
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .form-section {
+            margin: 20px 0;
+        }
+        
+        .form-section h2 {
+            margin-bottom: 10px;
+        }
+        
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            width: calc(50% - 20px);
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-section input[type="submit"],
+        .form-section input[type="button"] {
+            width: auto;
+            background-color: #ea8c8c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        
+        .form-section input[type="submit"]:hover,
+        .form-section input[type="button"]:hover {
+            background-color: #c76464;
+        }
+        
+        .events {
+            float: right;
+            width: 300px;
+            background-color: #000;
+            color: white;
+            padding: 15px;
+            margin: 20px;
+            position: relative;
+            top: -1130px;
+            right: 0px;
+        }
+        
+        .events h3 {
+            color: #f7c1c1;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .events img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #f7c1c1;
+            padding: 20px;
+            text-align: center;
+            color: #ae5a5a;
+            font-size: 18px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        EXAMPLE CAFE MENU
+    </header>
+
+    <nav>
+        <img src="/IMG/icons8-home-50.png">
+        <a href="#">STARTER</a>
+        <a href="#">MAIN COURSES</a>
+        <a href="#">DESSERTS</a>
+        <input type="text" placeholder="Search..." style="padding: 5px;">
+        <button style="padding: 5px 10px;">Go</button>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#">Cafe Latte</a>
+        <a href="#">Capuchino</a>
+        <a href="#">Ocean Blue</a>
+        <a href="#">Ice-cream Cafe</a>
+        <a href="#">Order Online</a>
+        <img src="/IMG/radically-improve-teamwork.jpg" alt="Team Photo" width="90" height="60">
+    </div>
+
+    <div class="content">
+        <h2>Starter</h2>
+        <ul>
+            <li>&bull; Chesnut and Mushroom Goujons (<a href="#">v</a>)</li>
+            <li>&bull; Goat Cheese (<a href="#">v</a>)</li>
+            <li>&bull; HONEY SOY CHICKEN KEBABS (<a href="#">v</a>)</li>
+            <li>&bull; Seafood Salad (<a href="#">v</a>)</li>
+        </ul>
+        <a href="#">Back to Top</a>
+        <br>
+        <h2>Desserts</h2>
+        <ul>
+            <li> &bull; Lemon Sorbet (<a href="#">v</a>)</li>
+            <li>&bull; Chocolate Mud Pie (<a href="#">v</a>)</li>
+            <li> &nbsp; &bull; Pecan Pie (<a href="#">v</a>)</li>
+            <li> &nbsp; &bull; Selection of fine Cheeses from Around the World (<a href="#">v</a>)</li>
+        </ul>
+        &nbsp; <a href="#">Back to Top</a>
+
+        <div class="form-section">
+            <h2>Information</h2>
+            <form>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Telephone">
+                <select>
+                <option>USA</option>
+            </select>
+                <input type="radio" name="color" value="rock" /> Vietnamese
+                <input type="radio" name="color" value="pop" /> Foreigner
+                <textarea placeholder="Comment"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+                <input type="button" value="Cancel">
+            </form>
+        </div>
+    </div>
+
+    <div class="events">
+        <h3>Events</h3>
+        <div>
+            <h4>Regular Meetings</h4>
+            <img src="/IMG/meeting.png" alt="Meeting">
+            <p>Host your regular team meetings or activities in the comfort of your own private room. <a href="#">Read more...</a></p>
+        </div>
+        <div>
+            <h4>Product Launches</h4>
+            <img src="/IMG/images.png" alt="Product Launch">
+            <p>Launch your product with ease in a space that truly fits its image. <a href="#">Read more...</a></p>
+        </div>
+    </div>
+
+    <footer>
+        ABC Company © · 12345678 · abccoffee@gmail.com
+    </footer>
+
+</body>
+
+</html>
