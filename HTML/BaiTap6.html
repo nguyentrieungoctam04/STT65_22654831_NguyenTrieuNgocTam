@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: left;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 0 auto;
+        }
+        h2 {
+            color: navy;
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <h4>Register your Jackson Electronic product here</h4>
+        <form>
+            <label for="fname">First Name:</label> 
+            <input type="text" id="fname" name="fname"><br><br> 
+            <label for="lname">Last name:</label> 
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="address1">Address#1:</label>
+            <input type="text" id="address1" name="address1"><br><br>
+            <label for="address1">Address#2:</label>
+            <input type="text" id="address2" name="address2"><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city"><br><br>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state"><br><br>
+            <label for="zip">Zip:</label>
+            <input type="text" id="zip" name="zip"><br><br>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">United States</option>
+            </select><br><br>
+            <label for="product">Product:</label>
+            <select id="product" name="product">
+                <option value="scanmaster">ScanMaster</option>
+            </select><br><br>
+            <label for="date">Date Purchased:</label>
+            <input type="date" id="date" name="date"><br><br>
+            <label for="serial">Serial#:</label>
+            <input type="text" id="serial" name="serial"><br><br>
+            <p>Used for:</p>
+            <input type="radio" id="home" name="use" value="home">
+            <label for="home">Home</label><br>
+            <input type="radio" id="business" name="use" value="business">
+            <label for="business">Business</label><br>
+            <input type="radio" id="educational" name="use" value="educational">
+            <label for="educational">Educational Institution</label><br>
+            <input type="radio" id="other" name="use" value="other">
+            <label for="other">Other</label><br><br>
+            <p>System (check all that apply):</p>
+            <input type="checkbox" id="windows" name="system" value="windows">
+            <label for="windows">Windows</label><br>
+            <input type="checkbox" id="unix" name="system" value="unix">
+            <label for="unix">UNIX</label><br>
+            <input type="checkbox" id="mac" name="system" value="mac">
+            <label for="mac">Macintosh</label><br>
+            <input type="checkbox" id="other_system" name="system" value="other">
+            <label for="other_system">Other</label><br><br>
+            <label for="comments">Comments:</label><br> <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Click to register"> <input type="reset" value="Click to cancel">
+        </form>
+    </div>
+</body>
+</html>
+
