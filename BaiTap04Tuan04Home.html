@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .wrapper {
+            background-color: white;
+            width: 1089px;
+            height: 780px;
+        }
+        
+        header {
+            width: 100%;
+            height: 50px;
+        }
+        
+        header img {
+            position: relative;
+            left: 200px;
+            top: 10px;
+            text-align: right;
+        }
+        
+        aside {
+            width: 20%;
+            height: 650px;
+            position: relative;
+            left: 10px;
+            top: 30px;
+            float: left;
+            background-image: url('/IMG/back.jpg');
+        }
+        
+        .menu li {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            display: block;
+            justify-content: space-between;
+            padding: 0px;
+            text-align: left;
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+        
+        .menu li a {
+            display: inline-block;
+            text-align: left;
+            text-decoration: none;
+            color: chocolate;
+            padding: 7.5px;
+        }
+        
+        .menu li a:hover {
+            background-color: white;
+        }
+        
+        .content {
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            float: left;
+        }
+        
+        .content h1 {
+            color: chocolate;
+            position: relative;
+            top: 20px;
+            left: 50px;
+        }
+        
+        .content p {
+            color: blueviolet;
+            position: relative;
+            left: 50px;
+            top: 30px;
+        }
+        
+        .content-box {
+            position: absolute;
+            right: 30px;
+            top: 280px;
+            border: 2px solid chocolate;
+            /* Đường viền */
+            padding: 10px;
+            /* Khoảng cách bên trong khung */
+            width: 20%;
+            /* Chiều rộng của khung */
+            height: 350px;
+            margin: 20px auto;
+            /* Căn giữa khung */
+            border-radius: 10px;
+            /* Bo tròn các góc khung */
+            background-color: white;
+            /* Màu nền khung */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-box h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: chocolate;
+            font-size: large;
+            position: absolute;
+            right: 80px;
+            top: 20px;
+            text-align: center;
+        }
+        
+        .content-box p {
+            position: relative;
+            left: 10px;
+            top: 40px;
+        }
+        
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            float: left;
+            position: absolute;
+            bottom: 20px;
+            left: 550px;
+        }
+        
+        footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: chocolate;
+            font-size: large;
+        }
+    </style>
+    <div class="wrapper">
+        <haeder>
+            <img src="/IMG/scraps.jpg" width="300px">
+            <hr>
+            <div class="content">
+                <aside>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Getting Started</a></li>
+                            <li><a href="#">Scraphooking Tips</a></li>
+                            <li><a href="#">Supply List</a></li>
+                            <li><a href="#">Online Classes</a></li>
+                            <li><a href="#">Sample Pages</a></li>
+                            <li><a href="#">Online Store</a></li>
+                            <li><a href="#">Shopping Cart</a></li>
+                            <li><a href="#">Check Out</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Orrder Status</a></li>
+                            <li><a href="#">Wish List</a></li>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">About Uss</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <h1>Getting Started</h1>
+                <p>Cascading Style Sheets (CSS) is a fantastic tool to add layout to your websites. It can save you a lot of time and it enables you to design websites in a completely new way. CSS is a must for anyone working with web design.
+                </p>
+                <br>
+                <h1>Preserving Your Memories</h1>
+                <p>This tutorial will get you started with CSS in just a few hours. It is easy to understand and it will teach you all the sophisticated techniques.
+                </p><br>
+                <p>Learning CSS is fun. As you go along through the tutorial, remember to take enough time to properly experiment with what you learn in each lesson. sample page</p>
+                <div class="content-box">
+                    <h2>Basic Materials</h2><br>
+                    <p>&bull; Acid-free paper, card stock, and stickers</p><br>
+                    <p>&bull; Acid-free pen, markers, and adhesive</p><br>
+                    <p>&bull; Acid-free memory book album</p><br>
+                    <p>&bull; Straight and pattern edge scissors</p><br>
+                    <p>&bull; Photos and photo corners</p><br>
+                    <p>&bull; Paper punches</p><br>
+                    <p>&bull; Journailing templates</p><br>
+                    <p>&bull; Decorative embellishments</p><br>
+
+
+                </div>
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <hr>
+                <footer>
+                    <p>Online Scrapbooks &bull; 212 Sunset Drive &bull; Richmond, KY 40475 &bull; (859)555-8100</p>
+                </footer>
+            </div>
+        </haeder>
+    </div>
+</body>
+
+</html>
