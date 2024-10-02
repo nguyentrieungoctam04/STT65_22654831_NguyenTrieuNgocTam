@@ -6,213 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoko's Kitchen</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        
         header {
-            background-color: #dddddd;
-            padding: 20px;
-            text-align: left;
-            color: #f4f4f4;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-image: url('/IMG/background.png');
-        }
-        
-        header img {
-            width: 90px;
-            vertical-align: middle;
+            background-color: grey;
         }
         
         header h1 {
-            display: inline-block;
-            margin: 0;
-            padding-left: 10px;
-            font-size: 24px;
-            text-decoration: none;
-            vertical-align: middle;
-        }
-        
-        nav {
-            background-color: #999999;
-            overflow: hidden;
-        }
-        
-        nav a {
-            float: left;
-            display: block;
             color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
         }
         
-        nav a:hover {
-            background-color: #777777;
-        }
-        
-        .container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 10px;
-            padding: 10px;
-            text-decoration: none;
-            vertical-align: middle;
-            text-align: left;
-        }
-        
-        .container img {
-            width: 90px;
-            vertical-align: middle;
-        }
-        
-        .container h2 {
-            display: inline-block;
-            margin: 0;
-            padding-left: 10px;
-            font-size: 24px;
-            text-decoration: none;
-            vertical-align: top;
-        }
-        
-        .container h4 {
-            display: inline-block;
-            margin: 0;
-            padding-left: 10px;
-            font-size: 20px;
-            text-decoration: none;
-            vertical-align: top;
-        }
-        
-        .course {
-            display: grid;
-            grid-template-columns: 0fr 1fr;
-            gap: 20px;
-            padding: 20px;
-            text-decoration: none;
-            vertical-align: text-top;
-            text-align: left;
-        }
-        
-        .course p {
-            display: block;
-            margin: 0;
-            padding-left: 10px;
-            font-size: 17px;
-            text-decoration: none;
-            position: relative;
-            top: -90px;
-        }
-        
-        .main-content,
-        .sidebar {
-            background-color: white;
-            padding: 10px;
-        }
-        
-        .main-content img {
-            width: 180px;
-            height: 150px;
-        }
-        
-        .main-content h2 {
-            color: #333333;
-        }
-        
-        .main-content p {
-            color: #777777;
-        }
-        
-        .sidebar h3 {
-            color: #d54b70;
-        }
-        
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .sidebar ul li {
-            padding: 5px 0;
-        }
-        
-        .sidebar ul li a {
-            color: #d54b70;
-            text-decoration: none;
-        }
-        
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #dddddd;
-            color: #555555;
-            font-size: 14px;
+        header h3 {
+            color: white;
         }
     </style>
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <div class="container mt-5">
+        <header class="text-center mb-5">
+            <h1>YOKO'S KITCHEN</h1>
+            <h3>JAPANESE COOKING CLASSES</h3>
 
-    <br>
-    <header>
-        <img src="/IMG/logo.png" alt="Yoko's Kitchen Logo">
-        <h1>Yoko's Kitchen<br>JAPANESE COOKING CLASSES</h1>
-    </header>
+        </header>
 
-    <nav>
-        <a href="#">home</a>
-        <a href="#">classes</a>
-        <a href="#">catering</a>
-        <a href="#">about</a>
-        <a href="#">contact</a>
-    </nav>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row mb-4">
+                    <div class="col-md-5">
+                        <img src="/IMG/Garlic-Ginger-Bok-Choy-main-500x375.jpg" alt="Bok Choi" class="img-fluid">
+                        <p class="text-center mt-2">Bok Choi</p>
+                    </div>
+                    <div class="col-md-7">
+                        <h4>Japanese Vegetarian</h4>
+                        <p class="text-danger">Five week course in London</p>
+                        <p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+                    </div>
+                </div>
 
-    <div class="container">
-        <div class="main-content">
-            <div class="course">
-                <img src="/IMG/Garlic-Ginger-Bok-Choy-main-500x375.jpg" alt="Bok Choi">
-                <h2>Japanese Vegetarian<br>Five week course in London</h2>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="/IMG/teriyaki.jpg" alt="Teriyaki Sauce" class="img-fluid">
+                        <p class="text-center mt-2">Teriyaki Sauce</p>
+                    </div>
+                    <div class="col-md-7">
+                        <h4>Sauces Masterclass</h4>
+                        <p class="text-danger">One day workshop</p>
+                        <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+                    </div>
+                </div>
             </div>
-            <br>
-            <div class="course">
-                <img src="/IMG/teriyaki.jpg" alt="Teriyaki Sauce">
-                <h2>Sauces Masterclass<br>One day workshop</h2>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+            <div class="col-md-4">
+                <h4>Popular Recipes</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Yakitori (grilled chicken)</a></li>
+                    <li><a href="#" class="text-decoration-none">Tsukune (minced chicken patties)</a></li>
+                    <li><a href="#" class="text-decoration-none">Okonomiyaki (savory pancakes)</a></li>
+                    <li><a href="#" class="text-decoration-none">Mizutaki (chicken stew)</a></li>
+                </ul>
+
+                <h4 class="mt-4">Contact</h4>
+                <address>
+                    Yoko's Kitchen<br>
+                    27 Redchurch Street<br>
+                    Shoreditch<br>
+                    London E2 7DP
+                </address>
             </div>
         </div>
-
-        <aside class="sidebar">
-            <h3>Popular Recipes</h3>
-            <ul>
-                <li><a href="#">Yakitori (grilled chicken)</a></li>
-                <li><a href="#">Tsukune (minced chicken patties)</a></li>
-                <li><a href="#">Okonomiyaki (savory pancakes)</a></li>
-                <li><a href="#">Mizutaki (chicken stew)</a></li>
-            </ul>
-            <h3>Contact</h3>
-            <address>
-            Yoko's Kitchen<br>
-            27 Redchurch Street<br>
-            Shoreditch<br>
-            London E2 7DP
-        </address>
-        </aside>
     </div>
 
-    <footer>
-        &copy; 2011 Yoko's Kitchen
-    </footer>
-
+    <script src="/JS/jquery-3.7.1.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
 </body>
 
 </html>
