@@ -5,229 +5,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky World Registration</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-
-<body>
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #66bbff;
-            margin: 0;
-            padding: 0;
-        }
-        
-        header {
-            background-color: #66bbff;
-            padding: 10px;
-            text-align: left;
+            background: linear-gradient(to bottom, #a8d0f0, #86b3d1);
             color: white;
         }
         
-        nav {
-            display: flex;
-            justify-content: space-between;
-            background-color: #66bbff;
-            padding: 0px;
-            text-align: left;
-            vertical-align: middle;
-            justify-content: left;
-            position: relative;
-            left: 20px;
-            top: 30px;
-        }
-        
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .title {
-            font-size: 2rem;
-            margin-top: 10px;
-        }
-        
-        main {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px;
-        }
-        
-        .form-section,
-        .image-section {
-            width: 45%;
-        }
-        
-        h1 {
-            text-align: right;
-            vertical-align: middle;
-            position: relative;
-            right: 20px;
-            top: -20px;
-            filter: drop-shadow(0.50em 0.50em 0.3em);
-            color: #1a237e;
-            font-size: 36;
-        }
-        
-        h2 {
-            color: #ffffff;
-        }
-        
-        h3 {
-            filter: drop-shadow(0.50em 0.50em 0.3em);
-            color: #1a237e;
-        }
-        
-        form {
-            background-color: 66bbff;
+        .registration-info {
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            color: #ffffff;
         }
         
-        form label,
-        form input,
-        form select,
-        form textarea {
-            display: block;
-            margin-bottom: 10px;
-            width: 80%;
-            padding: 8px;
+        .submit-btn {
+            color: #000;
+            background-color: #f0f0f0;
         }
         
-        form textarea {
-            height: 100px;
+        .main-header {
+            color: #fff;
         }
         
-        .form-buttons {
-            display: flex;
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #fff;
         }
         
-        form button {
-            padding: 10px 20px;
-            background-color: #0288d1;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        form button:hover {
-            background-color: #0277bd;
-        }
-        
-        .image-section img {
-            width: 100%;
+        .img-fluid {
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
         }
-        
-        .image-section h3 {
-color: #1a237e;
-            text-align: center;
-            margin-top: 10px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #66bbff;
-            color: white;
-            position: absolute;
-            width: 100%;
-            bottom: 120;
-        }
-        
-        .dotted-line {
-            border: none;
-            border-top: 2px dotted rgb(255, 255, 255);
-            margin: 20px 0;
-        }
-        
-        p {
-            color: #ffffff;
-        }
-        
-        span {
-            color: #1a237e;
-            position: fixed;
-            right: 180px;
-            vertical-align: middle;
-            font-size: medium;
-            text-decoration: none;
-        }
     </style>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <h1 class="title">Sky World</h1>
-        <hr class="dotted-line">
-    </header>
-    <main>
-        <section class="form-section">
-            <h2>Registration Information</h2>
-            <p>Start your travel planning right now with our online tour registration form. Just tell us a little about yourself and our travel experts will contact you to create the perfect tour package custom built for your group's needs.</p>
+</head>
 
-            <form>
-                <label for="title">Title</label>
-                <select id="title" name="title">
-                    <option>Mr.</option>
-                    <option>Ms.</option>
-                    <option>Mrs.</option>
-                    <option>Dr.</option>
-                </select>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sky World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="main-header text-center">Registration Information</h2>
+        <p class="text-center text-white">Start your travel planning right now with our on-line tour registration form. Just tell us a little about yourself and your group and one of our travel experts will contact you to create the perfect tour package custom-built for your group’s needs.</p>
 
-                <label for="fullName">Full Name *</label>
-                <input type="text" placeholder="First Name" required>
-
-                <label for="address">Mailing Address</label>
-                <input type="text" placeholder="Mailing Address" required>
-
-                <label for="city">City</label>
-                <input type="text" placeholder="City" required>
-
-                <label for="country">Country</label>
-                <input type="text" placeholder="Country" required>
-
-                <label for="questions">Specific questions or requests about your tour</label>
-                <textarea placeholder="Specific questions or requests about your tour"></textarea><br>
-
-                <div class="form-buttons">
-                    <button type="submit">Submit</button> &nbsp;&nbsp;&nbsp;
-                    <button type="reset">Reset</button>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="registration-info p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <select id="title" class="form-select">
+                                <option selected>Mr.</option>
+                                <option>Ms.</option>
+                                <option>Mrs.</option>
+                                <option>Dr.</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="First Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mailingAddress" class="form-label">Mailing Address</label>
+                            <input type="text" class="form-control" id="mailingAddress" placeholder="Mailing Address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="City">
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="country" placeholder="Country">
+                        </div>
+                        <div class="mb-3">
+                            <label for="specificQuestions" class="form-label">Specific questions or requests about your tour</label>
+                            <textarea class="form-control" id="specificQuestions" rows="3" placeholder="Specific questions or requests"></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                        <button type="reset" class="btn submit-btn ms-2">Reset</button>
+                    </form>
                 </div>
-            </form>
-        </section>
+            </div>
 
-        <section class="image-section">
-            <img src="/IMG/sky.png">
-            <h3>You've arrived.</h3>
-            <span><b>Journeys as great as the destinations.</b></span>
-        </section>
-    </main>
-    <footer>
-        <hr class="dotted-line">
-<p>© 2016 Sky World Tours. All rights reserved.</p>
-        <p>Contact information: Student Name | Student ID | Testing date: 16 Sept 2016</p>
-    </footer>
+            <div class="col-md-6">
+                <img src="/IMG/sky.png" alt="Ocean View" class="img-fluid mb-3">
+                <h3 class="text-center text-white">You’ve arrived.</h3>
+                <p class="text-center text-white">Journeys as great as the destinations.</p>
+            </div>
+        </div>
+
+        <footer class="footer text-center mt-5">
+            <p>&copy;2016 Sky World Tours. All rights reserved.</p>
+            <p>Contact information: Student Name | Student ID | Testing date: 16 Sept 2016</p>
+        </footer>
+    </div>
+
+    <script src="/JS/jquery-3.7.1.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
 </body>
 
 </html>
