@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Table</title>
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+    <script src="/JS/jquery-3.7.1.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <script></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .navbar h1 {
+            font-family: 'Brush Script MT', cursive;
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: 5px;
+            color: white;
+        }
+        
+        nav ul li {
+            width: 140px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: relative;
+            left: 300px;
+            top: 15px;
+            color: white;
+            font-size: small;
+        }
+        
+        .navbar a {
+            color: #fff;
+        }
+        
+        .navbar {
+            background-color: #000;
+        }
+        
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        
+        .btn-custom {
+            background-color: #f7c531;
+            color: #111;
+            font-weight: bold;
+            padding: 20px 60px;
+            border-radius: 60px;
+            border: none;
+            font-size: small;
+            position: relative;
+            left: 50px;
+            top: -20px;
+        }
+        
+        .btn-custom:hover {
+            background-color: #e5a90c;
+            color: #fff;
+        }
+        
+        .btn-order {
+            background-color: #f7c531;
+            color: #000;
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 5px 20px;
+        }
+        
+        .btn-order:hover {
+            background-color: #e5a90c;
+            color: #fff;
+        }
+        
+        .navbar .btn-order-online {
+            background-color: #ffcc00;
+            color: white;
+        }
+        
+        .navbar .btn-order-online:hover {
+            background-color: #e6b800;
+        }
+        
+        .book-section {
+            margin: 50px;
+        }
+        
+        .book-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .book-table-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        .book-table-btn:hover {
+            background-color: #e6b800;
+        }
+        
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+        }
+        
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="row">
+            <div class="col-3 col-md-3">
+                <h1>Feane</h1>
+            </div>
+            <div class="col-9 col-md-9">
+
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand">
+                <ul class="navbar-nav" style="color: #fff">
+                    <li class="nav-item"><a href="/HTML/home.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="/HTML/menu.html" class="nav-link">MENU</a></li>
+                    <li class="nav-item"><a href="/HTML/about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="/HTML/book.html" class="nav-link">BOOK TABLE</a></li>
+                    <li class="nav-item"><a href="#" id="btnOpen" class="nav-link"><button class="btn btn-custom">Order Online</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="container book-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="book-title">Book A Table</h2>
+                <form>
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Phone Number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="form-control">
+                                    <option>How many persons?</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5+</option>
+                                </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit" class="book-table-btn">BOOK NOW</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6898509087394!2d-122.4181690846824!3d37.77902617975862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a22953b0b%3A0x9a85d59c26f9de89!2sSan+Francisco+City+Hall!5e0!3m2!1sen!2sus!4v1598654868736!5m2!1sen!2sus"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

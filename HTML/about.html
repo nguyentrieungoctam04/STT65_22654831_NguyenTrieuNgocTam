@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Feane</title>
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+    <script src="/JS/jquery-3.7.1.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <script></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: white;
+        }
+        
+        .navbar h1 {
+            font-family: 'Brush Script MT', cursive;
+            text-align: center;
+            position: relative;
+            left: 10px;
+            top: 5px;
+        }
+        
+        nav ul li {
+            width: 140px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: relative;
+            left: 300px;
+            top: 12px;
+            color: white;
+            font-size: small;
+        }
+        
+        .navbar a {
+            color: #fff;
+        }
+        
+        .navbar {
+            background-color: #000;
+        }
+        
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        
+        .btn-order {
+            background-color: #f7c531;
+            color: #000;
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 5px 20px;
+        }
+        
+        .btn-order:hover {
+            background-color: #e5a90c;
+            color: #fff;
+        }
+        
+        .about-section {
+            padding: 50px 0;
+        }
+        
+        .about-text {
+            padding: 30px;
+        }
+        
+        .about-text h2 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2.5rem;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .btn-read-more {
+            background-color: #f7c531;
+            color: #000;
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        
+        .btn-read-more:hover {
+            background-color: #e5a90c;
+            color: #fff;
+        }
+        
+        .burger-image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .btn-custom {
+            background-color: #f7c531;
+            color: #111;
+            font-weight: bold;
+            padding: 20px 60px;
+            border-radius: 60px;
+            border: none;
+            font-size: small;
+            position: relative;
+            left: 50px;
+            top: -20px;
+        }
+        
+        .btn-custom:hover {
+            background-color: #e5a90c;
+            color: #fff;
+        }
+        
+        .carousel-indicators {
+            bottom: -30px;
+        }
+        
+        .carousel-indicators li {
+            background-color: #f7c531;
+        }
+        
+        .carousel-indicators .active {
+            background-color: #fff;
+        }
+        
+        .modal-header,
+        .modal-footer {
+            background-color: #fff;
+            border: none;
+        }
+        
+        .modal-body {
+            background-color: #fff;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        
+        .form-control {
+            border: 2px solid #ffcc00;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        
+        .form-check-label {
+            color: #000;
+        }
+        
+        .form-label {
+            color: #000;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btnOpen").click(function(e) {
+                $("#myModal").modal();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="row">
+            <div class="col-3 col-md-3">
+                <h1>Feane</h1>
+            </div>
+            <div class="col-9 col-md-9">
+
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand">
+                <ul class="navbar-nav" style="color: #fff">
+                    <li class="nav-item"><a href="/HTML/home.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="/HTML/menu.html" class="nav-link">MENU</a></li>
+                    <li class="nav-item"><a href="/HTML/about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="/HTML/book.html" class="nav-link">BOOK TABLE</a></li>
+                    <li class="nav-item"><a href="/HTML/order.html" id="btnOpen" class="nav-link"><button class="btn btn-custom">Order Online</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="/IMG/about-img.png" alt="Burger Image" class="burger-image">
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text">
+                        <h2>We Are Feane</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                        <a href="#" class="btn-read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="font-family: 'Brush Script MT', cursive ;">ORDER</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <small id="emailHelp" class="form-text text-muted">Telephone</small>
+                                <input type="text" class="form-control" id="txtphone" aria-describedby="txtphone">
+
+                            </div>
+                            <div class="form-group">
+                                <small id="emailHelp" class="form-text text-muted">Email</small>
+                                <input type="text" class="form-control" id="txtemail">
+
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Order</button>
+                        <button type="button" class="btn btn-primary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

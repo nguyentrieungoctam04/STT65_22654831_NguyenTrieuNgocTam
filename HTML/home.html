@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+    <script src="/JS/jquery-3.7.1.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <script></script>
+    <style>
+        .container {
+            background-color: black;
+            color: white;
+            position: relative;
+            left: 20px;
+            top: -10px;
+            width: 100%;
+        }
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        .container h1 {
+            font-family: 'Brush Script MT', cursive;
+            text-align: center;
+            position: relative;
+            left: 20px;
+            top: 30px;
+        }
+        
+        .content h1 {
+            font-family: 'Brush Script MT', cursive;
+            text-align: center;
+            position: relative;
+            left: 20px;
+            top: 30px;
+        }
+        
+        .header-section {
+            height: 100vh;
+            background-image: url('/IMG/hero-bg.jpg');
+            background-size: cover;
+            background-position-x: center;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .header-section .content {
+            max-width: 600px;
+            margin-left: 50px;
+        }
+        
+        .header-section h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .header-section p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        
+        nav ul li {
+            width: 140px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: relative;
+            left: 300px;
+            top: -20px;
+            color: white;
+            font-size: small;
+        }
+        
+        .navbar a {
+            color: #fff;
+        }
+        
+        .btn-custom {
+            background-color: #f7c531;
+            color: #111;
+            font-weight: bold;
+            padding: 20px 60px;
+            border-radius: 60px;
+            border: none;
+            font-size: small;
+            position: relative;
+            left: 50px;
+            top: -20px;
+        }
+        
+        .btn-custom:hover {
+            background-color: #e5a90c;
+            color: #fff;
+        }
+        
+        .carousel-indicators {
+            bottom: -30px;
+        }
+        
+        .carousel-indicators li {
+            background-color: #f7c531;
+        }
+        
+        .carousel-indicators .active {
+            background-color: #fff;
+        }
+        
+        .modal-header,
+        .modal-footer {
+            background-color: #fff;
+            border: none;
+        }
+        
+        .modal-body {
+            background-color: #fff;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        
+        .form-control {
+            border: 2px solid #ffcc00;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        
+        .form-check-label {
+            color: #000;
+        }
+        
+        .form-label {
+            color: #000;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btnOpen").click(function(e) {
+                $("#myModal").modal();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md-3">
+                <h1>Feane</h1>
+            </div>
+            <div class="col-9 col-md-9">
+
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand">
+                <ul class="navbar-nav" style="color: #fff">
+                    <li class="nav-item"><a href="/HTML/home.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="/HTML/menu.html" class="nav-link">MENU</a></li>
+                    <li class="nav-item"><a href="/HTML/about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="/HTML/book.html" class="nav-link">BOOK TABLE</a></li>
+                    <li class="nav-item"><a href="/HTML/order.html" id="btnOpen" class="nav-link"><button class="btn btn-custom">Order Online</button></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-section">
+
+            <div class="content">
+                <h1>Fast Food Restaurant</h1>
+                <p>Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsum.</p>
+                <button class="btn btn-custom">Order Now</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" style="font-family: 'Brush Script MT', cursive ;">ORDER</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <small id="emailHelp" class="form-text text-muted">Telephone</small>
+                                    <input type="text" class="form-control" id="txtphone" aria-describedby="txtphone">
+
+                                </div>
+                                <div class="form-group">
+                                    <small id="emailHelp" class="form-text text-muted">Email</small>
+                                    <input type="text" class="form-control" id="txtemail">
+
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Order</button>
+                            <button type="button" class="btn btn-primary">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
