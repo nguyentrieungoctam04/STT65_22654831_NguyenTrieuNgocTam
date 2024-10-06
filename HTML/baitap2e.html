@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        /* Định dạng cho hình ảnh */
+        
+        img {
+            width: 400px;
+            height: 300px;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #333;
+        }
+        /* Định dạng cho các nút Play và Stop */
+        
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <img id="slideshow" src="/img/b1.jpg" ; src="/img/b2.jpg" ; src="/img/b3.jpg" alt="Slideshow Image">
+    </div>
+
+
+    <div class="controls">
+        <button onclick="startSlideshow()">Play</button>
+        <button onclick="stopSlideshow()">Stop</button>
+    </div>
+
+    <script>
+        // Mảng chứa các tên file ảnh
+        var images = ["b1.jpg ", "b2.jpg ", "b3.jpg ", " img/b4.jpg", "img/b5.jpg ", "img/b6.jpg ", "img/b7.jpg ", "img/b8.jpg ", "img/b9.jpg ", " img/b10.jpg"];
+        var currentIndex = 0;
+        var timeoutId;
+
+        // Hàm để bắt đầu slideshow
+        function startSlideshow() {
+            if (!timeoutId) {
+                changeImage(); // Gọi hàm thay đổi hình ảnh đầu tiên nếu không có timeout nào
+            }
+        }
+
+        // Hàm thay đổi hình ảnh
+        function changeImage() {
+            // Lấy thẻ img và thay đổi src
+            var imgElement = document.getElementById("slideshow");
+            imgElement.src = images[currentIndex];
+            console.log("Current image:", images[currentIndex]); // Log kiểm tra xem ảnh hiện tại là gì
+
+            // Cập nhật chỉ số hình ảnh, nếu quá 9 thì quay lại 0
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Thiết lập thời gian tự động chuyển ảnh sau 1 giây (1000ms)
+            timeoutId = setTimeout(changeImage, 1000);
+        }
+
+        // Hàm để dừng slideshow
+        function stopSlideshow() {
+            if (timeoutId) {
+                clearTimeout(timeoutId); // Xóa hàm timeout để dừng chuyển ảnh
+                timeoutId = null; // Đặt lại timeoutId để có thể play lại
+            }
+        }
+    </script>
+
+</body>
+
+</html>

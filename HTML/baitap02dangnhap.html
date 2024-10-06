@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin đăng ký</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+        [class*=col-] {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .registration-form {
+            margin: 50px auto;
+            width: 50%;
+            border: 1px solid #dee2e6;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .registration-form h3 {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            color: #e06666;
+            border-bottom: 2px solid #e06666;
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            font-weight: bold;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="registration-form">
+            <h3>THÔNG TIN ĐĂNG KÝ</h3>
+            <form>
+                <div class="form-group mb-3 row">
+                    <label for="hoTen" class="col-sm-3 col-form-label">Họ tên</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="hoTen" placeholder="Nhập họ tên">
+                    </div>
+                </div>
+                <div class="form-group mb-3 row">
+                    <label for="matKhau" class="col-sm-3 col-form-label">Mật khẩu</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="matKhau" placeholder="Nhập mật khẩu">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Nhập</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hiện các phép tính</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+        [class*=col-] {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .registration-form {
+            margin: 50px auto;
+            width: 50%;
+            border: 1px solid #dee2e6;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .registration-form h3 {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            color: #e06666;
+            border-bottom: 2px solid #e06666;
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            font-weight: bold;
+        }
+        
+        button {
+            margin-top: 10px;
+            width: 90px;
+        }
+    </style>
+    <script>
+        function thucHienPhepToan(phepToan) {
+            const so1 = document.getElementById("so1").value;
+            const so2 = document.getElementById("so2").value;
+            const ketQuaDiv = document.getElementById("ketQua");
+            const errorP = document.getElementById("error");
+
+            if (isNaN(so1) || isNaN(so2) || so1 === "" || so2 === "") {
+                errorP.textContent = "Vui lòng nhập đúng số!";
+                ketQuaDiv.innerHTML = "";
+                return;
+            }
+
+            const num1 = parseFloat(so1);
+            const num2 = parseFloat(so2);
+
+            errorP.textContent = "";
+
+            let ketQua = '';
+
+
+            switch (phepToan) {
+                case 'cong':
+                    ketQua = num1 + num2;
+                    ketQuaDiv.innerHTML = `<p>Kết quả Cộng: ${ketQua}</p>`;
+                    break;
+                case 'tru':
+                    ketQua = num1 - num2;
+                    ketQuaDiv.innerHTML = `<p>Kết quả Trừ: ${ketQua}</p>`;
+                    break;
+                case 'nhan':
+                    ketQua = num1 * num2;
+                    ketQuaDiv.innerHTML = `<p>Kết quả Nhân: ${ketQua}</p>`;
+                    break;
+                case 'chia':
+                    if (num2 === 0) {
+                        ketQuaDiv.innerHTML = `<p class="error">Không thể chia cho 0!</p>`;
+                    } else {
+                        ketQua = num1 / num2;
+                        ketQuaDiv.innerHTML = `<p>Kết quả Chia: ${ketQua}</p>`;
+                    }
+                    break;
+                case 'chiaDu':
+                    if (num2 === 0) {
+                        ketQuaDiv.innerHTML = `<p class="error">Không thể chia cho 0!</p>`;
+                    } else {
+                        ketQua = num1 % num2;
+                        ketQuaDiv.innerHTML = `<p>Kết quả Chia dư: ${ketQua}</p>`;
+                    }
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="registration-form">
+
+            <div class="container">
+                <h2>Thực hiện các phép toán</h2>
+
+
+                <label>Nhập số thứ 1</label>
+                <input type="text" id="so1" placeholder=" "><br><br>
+                <label>Nhập số thứ 2</label>
+                <input type="text" id="so2" placeholder=" ">
+
+
+                <div>
+                    <button onclick="thucHienPhepToan('cong')">Cộng</button>
+                    <button onclick="thucHienPhepToan('tru')">Trừ</button>
+                    <button onclick="thucHienPhepToan('nhan')">Nhân</button>
+                    <button onclick="thucHienPhepToan('chia')">Chia</button>
+                    <button onclick="thucHienPhepToan('chiaDu')">Chia dư</button>
+                </div>
+
+                <br>
+                <div id="ketQua">
+                    <label>Kết quả</label>
+                    <input type="text" id="ketQua" placeholder=" "><br><br>
+                </div>
+                <p id="error" class="error"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

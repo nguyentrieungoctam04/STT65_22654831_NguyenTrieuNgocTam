@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sinh viên</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+        [class*=col-] {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .container h1 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        nav ul li {
+            width: 150px;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            left: 350px;
+        }
+        
+        table {
+            width: 70%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            text-align: center;
+            position: relative;
+            left: 240px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        
+        td {
+            padding: 10px;
+        }
+        
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            left: 550px;
+        }
+        
+        input,
+        button {
+            position: relative;
+            left: 400px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btnOpen").click(function(e) {
+                e.preventDefault();
+                $("#myModal").modal();
+            });
+
+            function kiemTraMaSV() {
+                var mauKT = /[0-9]{8}$/;
+                var chuoiMaSV = $("#txtMaSV").val();
+                var kq = mauKT.test(chuoiMaSV);
+                if (kq == true) {
+                    alert("Nhap dung mau");
+
+                } else {
+                    alert("THÔNG TIN KHÔNG HỢP LỆ");
+                }
+            }
+            $("#txtMaSV").blur(kiemTraMaSV);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-3 col-md-3">
+                <img src="/img/images.jpg" alt=" " srcset=" ">
+            </div>
+            <div class="col-9 col-md-9 align-content-around align-content-between">
+                <h1><b></b>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP.HCM</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <nav class="navbar navbar-expand">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="https://iuh.edu.vn/" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">SERVICES</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                      INFORMATION
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#" id="btnOpen">TRA CỨU</a>
+                        <a class="dropdown-item" href="#">DANH SÁCH SINH VIÊN</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">HELP</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+    <h2>Nhập thông tin sinh viên</h2>
+
+
+    <input type="text" id="mssv" placeholder="Nhập mã số sinh viên">
+    <input type="text" id="hoTen" placeholder="Nhập họ tên sinh viên">
+    <input type="text" id="lop" placeholder="Nhập lớp">
+    <button onclick="hienThiThongTin()">OK</button>
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>MSSV</th>
+                    <th>Họ tên</th>
+                    <th>Lớp</th>
+                </tr>
+            </thead>
+            <tbody id="danhSachSinhVien">
+
+            </tbody>
+    </div>
+    <div class="row">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">TRA CỨU THÔNG TIN SINH VIÊN</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="forMaSV">Nhập MSSV</label>
+                                <input type="text" class="form-control" id="txtMaSV" aria-describedby="txtMaSV">
+                                <small id="emailHelp" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Lưu Thông Tin</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-primary">Cancel</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function hienThiThongTin() {
+            const mssv = document.getElementById("mssv").value;
+            const hoTen = document.getElementById("hoTen").value;
+            const lop = document.getElementById("lop").value;
+
+
+            if (mssv === "" || hoTen === "" || lop === "") {
+                alert("Vui lòng nhập đầy đủ thông tin");
+                return;
+            }
+
+            const danhSach = document.getElementById("danhSachSinhVien");
+            const row = `<tr>
+                            <td>${mssv}</td>
+                            <td>${hoTen}</td>
+                            <td>${lop}</td>
+                         </tr>`;
+
+            danhSach.innerHTML = row;
+
+            document.getElementById("mssv").value = "";
+            document.getElementById("hoTen").value = "";
+            document.getElementById("lop").value = "";
+        }
+    </script>
+
+</body>
+
+</html>

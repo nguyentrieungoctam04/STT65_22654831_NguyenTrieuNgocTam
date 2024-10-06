@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn loại cafe</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        
+        .output {
+            margin-top: 15px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Chọn loại cafe :</h2>
+
+        <label><input type="checkbox" id="trungNguyen" value="Trung Nguyen"> Trung Nguyen</label>
+        <label><input type="checkbox" id="meKong" value="Me Kong"> Me Kong</label>
+        <label><input type="checkbox" id="newLife" value="New Life"> New Life</label>
+        <label><input type="checkbox" id="oceanBlue" value="Ocean Blue"> Ocean Blue</label>
+        <label><input type="checkbox" id="blueSpace" value="Blue Space"> Blue Space</label>
+        <label><input type="checkbox" id="windows" value="Windows"> Windows</label>
+
+        <button onclick="chonCafe()">Chọn</button>
+
+        <p class="output" id="output"></p>
+    </div>
+
+    <script>
+        function chonCafe() {
+
+            const cafes = document.querySelectorAll('input[type="checkbox"]');
+            let selectedCafes = [];
+
+
+            cafes.forEach(cafe => {
+                if (cafe.checked) {
+                    selectedCafes.push(cafe.value);
+                }
+            });
+
+            const output = document.getElementById("output");
+            if (selectedCafes.length > 0) {
+                output.textContent = `Bạn chọn cafe: ${selectedCafes.join(", ")}`;
+            } else {
+                output.textContent = "Bạn chưa chọn loại cafe nào.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

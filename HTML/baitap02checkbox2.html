@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Định Dạng</title>
+</head>
+
+<body>
+
+    <h3>FORM ĐỊNH DẠNG</h3>
+    <label for="name">Họ và tên:</label>
+    <input type="text" id="name"><br><br>
+
+    <input type="radio" id="background" name="format" value="background">
+    <label for="background">Background</label>
+
+    <input type="radio" id="font" name="format" value="font">
+    <label for="font">Font</label><br><br>
+
+    <label for="color">Chọn màu:</label>
+    <select id="color">
+        <option value="red">Đỏ</option>
+        <option value="blue">Xanh dương</option>
+        <option value="green">Xanh lá</option>
+    </select><br><br>
+
+    <button onclick="applyChanges()">Đổi màu</button>
+    <button onclick="cancelChanges()">Cancel</button>
+
+    <p id="outputText">Đây là đoạn văn bản để kiểm tra màu sắc.</p>
+
+    <script>
+        function applyChanges() {
+            let backgroundChecked = document.getElementById("background").checked;
+            let fontChecked = document.getElementById("font").checked;
+            let selectedColor = document.getElementById("color").value;
+            let outputText = document.getElementById("outputText");
+
+            if (backgroundChecked) {
+                outputText.style.backgroundColor = selectedColor;
+            } else if (fontChecked) {
+                outputText.style.color = selectedColor;
+            }
+        }
+
+        function cancelChanges() {
+            let outputText = document.getElementById("outputText");
+            outputText.style.backgroundColor = "";
+            outputText.style.color = "";
+        }
+    </script>
+
+</body>
+
+</html>
