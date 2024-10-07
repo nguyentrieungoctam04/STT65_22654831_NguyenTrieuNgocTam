@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slideshow</title>
     <style>
-        /* Định dạng cho hình ảnh */
         
         img {
             width: 400px;
@@ -15,8 +14,7 @@
             margin: 0 auto;
             border: 2px solid #333;
         }
-        /* Định dạng cho các nút Play và Stop */
-        
+      
         .controls {
             text-align: center;
             margin-top: 20px;
@@ -43,33 +41,30 @@
     </div>
 
     <script>
-        // Mảng chứa các tên file ảnh
+      
         var images = ["b1.jpg ", "b2.jpg ", "b3.jpg ", " img/b4.jpg", "img/b5.jpg ", "img/b6.jpg ", "img/b7.jpg ", "img/b8.jpg ", "img/b9.jpg ", " img/b10.jpg"];
         var currentIndex = 0;
         var timeoutId;
 
-        // Hàm để bắt đầu slideshow
         function startSlideshow() {
             if (!timeoutId) {
                 changeImage(); // Gọi hàm thay đổi hình ảnh đầu tiên nếu không có timeout nào
             }
         }
 
-        // Hàm thay đổi hình ảnh
+ 
         function changeImage() {
-            // Lấy thẻ img và thay đổi src
+       
             var imgElement = document.getElementById("slideshow");
             imgElement.src = images[currentIndex];
             console.log("Current image:", images[currentIndex]); // Log kiểm tra xem ảnh hiện tại là gì
 
-            // Cập nhật chỉ số hình ảnh, nếu quá 9 thì quay lại 0
             currentIndex = (currentIndex + 1) % images.length;
 
-            // Thiết lập thời gian tự động chuyển ảnh sau 1 giây (1000ms)
             timeoutId = setTimeout(changeImage, 1000);
         }
 
-        // Hàm để dừng slideshow
+  
         function stopSlideshow() {
             if (timeoutId) {
                 clearTimeout(timeoutId); // Xóa hàm timeout để dừng chuyển ảnh
