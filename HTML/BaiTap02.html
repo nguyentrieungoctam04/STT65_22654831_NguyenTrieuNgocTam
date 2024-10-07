@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Speed Company</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <style>
+        .header {
+            background-image: url('/img/banner_car.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            height: 300px;
+        }
+        
+        .price-update {
+            margin-top: 20px;
+        }
+        
+        .table-section {
+            margin-top: 20px;
+        }
+        
+        .table {
+            background-color: #f9f9f9;
+        }
+        
+        .price-box img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .price-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .price-box h3 {
+            color: green;
+        }
+        
+        h5 {
+            text-align: center;
+            color: blue;
+        }
+        
+        h6 {
+            text-align: center;
+            color: blue;
+        }
+        
+        h4 {
+            color: blue;
+            text-align: center;
+        }
+        
+        p {
+            color: blue;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 table-section">
+                <h4><b></b>Bảng tin thị trường</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+
+                            <td colspan="3">
+                                <h5>Vàng</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>Mua vào</H6>
+                            </td>
+                            <td>
+                                <H6>Bán ra</H6>
+                            </td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td colspan="3">
+                                <h5>USD</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>Mua vào</H6>
+                            </td>
+                            <td>
+                                <H6>Bán ra</H6>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-4 price-update">
+                <h4>Cập nhật giá cả thị trường</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="buy-price">Mua vào</label>
+                        <input type="text" class="form-control" id="buy-price">
+                    </div>
+                    <div class="form-group">
+                        <label for="sell-price">Bán ra</label>
+                        <input type="text" class="form-control" id="sell-price">
+                    </div>
+                    <div class="form-group">
+                        <label for="car-type">Loại xe</label>
+                        <select class="form-control" id="car-type">
+                            <option>Toyota</option>
+                            <option>Honda</option>
+                            <option>Ford</option>
+                            <option>BMW</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Đơn vị</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="currency" id="gold" value="Gold">
+                            <label class="form-check-label" for="gold">Vàng</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="currency" id="usd" value="USD">
+                            <label class="form-check-label" for="usd">USD</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-secondary">State</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-4 price-box">
+                <h4><b></b>Bảng báo giá</h4>
+                <p>- với kiểu dáng thể thao, sang trọng</p>
+                <p>- nổi bật, ít tốn nhiên liệu</p>
+                <p>- kiểu dáng thể thao</p>
+                <img src="/img/car1.jpg" alt="Car Image">
+                <h3>Giá: 35000 USD</h3>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
